@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    /* link rel="stylesheet" href="mystyle.css" */
+    /*example of linking an external style sheet without angle brackets*/
+
+    <style>
+
+        p.dotted {border-style: dotted;
+         border-color: red purple black blue;}
+
+        body {
+            background-image: url("paper.gif");
+        }
+
+        body {
+          background-color: Red;
+        }
+
+        h1 {
+          color: Black;
+          text-align: center;
+        }
+
+        p {
+          font-family: verdana;
+          font-size: 20px;
+          margin: 25px;
+          padding: 25px;
+        }
+        #para1 {
+            text-align: center;
+            color: red;
+                }
+        .center {
+            text-align: center;
+            color: red;
+            }
+        * {
+                text-align: center;
+                color: blue;
+            }
+        h2, h3{
+            text-align: center;
+            color: purple;
+            }
+        p.outline1 {outline: thick ridge red;}
+
+        p.linethrough {
+        text-decoration: line-through;
+        text-decoration-color: red;
+        text-decoration-style: wavy;
+        }
+
+        p.capitalize {
+        text-transform: capitalize;
+        }
+        h2.spaced {
+        letter-spacing: 5px;
+        }
+        p.small {
+        line-height: 0.7;
+        }
+
+        p.big {
+        line-height: 1.8;
+        }
+        p.one {
+        word-spacing: 20px;
+        }
+        h1.shadow {
+        text-shadow: 2px 2px 5px red;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Lukes CSS Example</h1>
+<p>Ive changed the background colour</p>
+<p id="para1">This is id slection</p>
+<p>This paragraph is not affected by the style because it doesnt have the Id</p>
+<h1 class="center">This is class selection</h1>
+<p>All the Text not affected by other selection is now blue and centered </p>
+<h2>This is involved in group selection so now its purple</h2>
+<h3>This too</h3>
+<p class="dotted">A dotted border.</p>
+<p class="outline1">cool outline</p>
+<p class="linethrough">There is a red wavy line through this test this is text decoration</p>
+<p class="capitalize">Capitalized text using html</p>
+<h2 class = spaced>This is a spaced letter heading</h2>
+<p class="small">
+    An example of a smaller line-height.<br>
+    An example of a smaller line-height.<br>
+</p>
+
+<p class="big">
+    An example of a bigger line-height.<br>
+    An example of a bigger line-height.<br>
+</p>
+<p class="one">This is a paragraph with larger word spacing.</p>
+<h1 class = "shadow">Text-shadow effect!</h1>
+</body>
+</html>
