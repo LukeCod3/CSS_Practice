@@ -193,6 +193,25 @@
         .active {
           background-color: red;
         }
+        q:lang(no) {
+          quotes: "~" "~";
+        }
+        p::first-letter {
+          color: #ff0000;
+          font-size: xx-large;
+        }
+        input[type="text"] {
+          width: 150px;
+          padding: 6px;
+          margin-bottom: 10px;
+          background-color: pink;
+        }
+
+        input[type="button"] {
+          width: 100px;
+          padding: 6px;
+          background-color: lightgreen;
+        }
 
 
     </style>
@@ -285,6 +304,18 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="#about">About</a></li>
 </ul>
+<p>Some text <q lang="no">A quote</q> Some text.</p>
+
+<p>WOW what a big first letter caused by a pseudo element!</p>
+
+<h2>Changing elements using attributes</h2>
+
+<form name="input" action="" method="get">
+    Firstname: <input type="text" name="Name" value="Stewie" size="20"><br>
+    Lastname: <input type="text" name="Name" value="Griffin" size="20"><br><br>
+    <input type="button" value="Button">
+</form>
+
 
 </body>
 </html>
