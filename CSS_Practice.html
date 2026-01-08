@@ -3,6 +3,8 @@
 <head>
     /* link rel="stylesheet" href="mystyle.css" */
     /*example of linking an external style sheet without angle brackets*/
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <style>
 
@@ -71,6 +73,126 @@
         h1.shadow {
         text-shadow: 2px 2px 5px red;
         }
+        .TimesNewRoman {
+        font-family: "Times New Roman", Times, serif;
+        }
+        .fallbackfonts {
+        font-family: Tahoma, Verdana, sans-serif;
+        }
+        p.italic {
+        font-style: italic;
+        }
+
+        p.oblique {
+        font-style: oblique;
+        }
+        ol {
+        background: Black;
+        padding: 5px;
+        }
+
+        ol li {
+          background: mistyrose;
+          color: darkred;
+          padding: 20px;
+          margin-left: 20px;
+        }
+
+        table, th, td {
+        border: 1px solid purple;
+        padding: 10px;
+        width: 500px;
+        }
+        td {
+        text-align: center;
+        }
+        tr:hover {background-color: coral;}
+
+        #panel, .flip {
+          padding: 10px;
+          text-align: center;
+          background-color: black;
+          color: white;
+          border: solid 1px white;
+          margin: auto;
+          cursor:pointer;
+        }
+
+        #panel {
+          display: none;
+        }
+
+        div.maxwidth {
+          max-width: 500px;
+          margin: auto;
+          border: 3px solid #73AD21;
+        }
+        div.sticky {
+          position: sticky;
+          top: 0;
+          padding: 5px;
+          background-color: #cae8ca;
+          border: 2px solid #4CAF50;
+        }
+
+        .container {
+          position: relative;
+        }
+        .gray-box {
+          position: absolute;
+          z-index: 3; /* gray box will be above both green and black box */
+          background: lightgray;
+          height: 60px;
+          width: 70%;
+          left: 50px;
+          top: 50px;
+        }
+
+        .green-box {
+          position: absolute;
+          z-index: 4; /* green box will be above black box */
+          background: lightgreen;
+          width: 35%;
+          left: 270px;
+          top: -15px;
+          height: 100px;
+        }
+        #overflowTest {
+          background: #04AA6D;
+          color: white;
+          padding: 15px;
+          width: 90%;
+          height: 100px;
+          overflow: scroll;
+          border: 1px solid #ccc;
+        }
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+
+        li {
+          float: left;
+        }
+
+        li a {
+          display: inline-block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        li a:hover {
+          background-color: #111;
+        }
+
+        .active {
+          background-color: red;
+        }
 
 
     </style>
@@ -79,6 +201,7 @@
 </head>
 <body>
 <h1>Lukes CSS Example</h1>
+<div class="sticky">Welcome to Lukes super cool web page!</div>
 <p>Ive changed the background colour to light blue</p>
 <p id="para1">This is id slection</p>
 <p>This paragraph is not affected by the style because it doesnt have the Id</p>
@@ -102,5 +225,70 @@
 </p>
 <p class="one">This is a paragraph with larger word spacing.</p>
 <h1 class = "shadow">Text-shadow effect!</h1>
+<p class="TimesNewRoman">Times New Roman font.</p>
+<p class = "fallbackfonts">This is a paragraph.</p>
+<p class="italic">italic style.</p>
+<p class="oblique">oblique style.</p>
+<i class="fas fa-cloud"></i>
+<i class="fas fa-heart"></i>
+<span style="cursor:crosshair">crosshair</span><br>
+<span style="cursor:progress">progress</span><br>
+
+<ol>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coca Cola</li>
+</ol>
+
+<table>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+    </tr>
+    <tr>
+        <td>Homer</td>
+        <td>Simpson</td>
+    </tr>
+    <tr>
+        <td>Marge</td>
+        <td>Simpson</td>
+    </tr>
+</table>
+
+<p class="flip" onclick="myFunction()">Click to show/hide panel</p>
+
+<p id="panel">Surprise</p>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("panel");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+</script>
+
+<div class="maxwidth"><p>This element has max-width: 500px;</p></div>
+
+<div class="container">
+    <div class="gray-box">  grey box under the green box</div>
+    <div class="green-box">green box ontop of the grey box</div>
+</div>
+
+<p><div id="overflowTest">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div></p>
+
+<ul>
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+</ul>
+
 </body>
 </html>
+
+
+
+
